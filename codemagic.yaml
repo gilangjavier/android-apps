@@ -6,6 +6,8 @@ workflows:
     name: Native Android
     max_build_duration: 60
     scripts:
+      - name: Upgrade Gradle
+        script: chmod +x gradle && gradle wrapper --gradle-version 5.1.1
       - name: Build debug apk
         script: chmod +x gradlew && ./gradlew assembleDebug
     artifacts:
