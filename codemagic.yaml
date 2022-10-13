@@ -5,9 +5,9 @@ workflows:
     max_build_duration: 60
     scripts:
       - name: Run tests
-        script: chmod +x gradlew && ./gradlew test
+        script: chmod +x gradle && ./gradle test
       - name: Build debug apk
-        script: ./gradlew assembleDebug
+        script: ./gradle assembleDebug
     artifacts:
       - app/build/**/outputs/**/*.apk
     publishing:
